@@ -8,13 +8,14 @@ int main() {
     // Ouverture du fichier
     FILE* file;
     
-    file = fopen("/Users/leo_a_m/Desktop/Cours/PFR/Traitement image/DATA/IMG_5389.txt", "r");
+    file = fopen("/Users/leo_a_m/Desktop/Cours/PFR/PFR1_G1_2024-25/Traitement_image/DATA/IMG_5389.txt", "r");
     if (file == NULL) {
         printf("Erreur : Impossible d'ouvrir le fichier.\n");
         exit(1);
     }
    
- 
+ /*####################################################################################################################*/
+    
     // Lecture de l'image
     readImage(file, &lignes, &colonnes, &d);
 
@@ -28,15 +29,19 @@ int main() {
     // Fermeture du fichier
     fclose(file);
 
-    // moyenne de la couleur rouge 
-    float Moy;
-    Moy=moyenne_couleur(IMAGE_R);
-    
-    printf("La moyenne de la couleur rouge est : %f\n", Moy);
+/*####################################################################################################################*/
    
-    // Test de la fonction valeur_RVB
+   // Test de la fonction valeur_RVB
     valeur_RVB(IMAGE_R, IMAGE_V, IMAGE_B);
+    printf("\n%s\n", "###################################################################################");
     printf("Les valeurs RVB du pixel (0,0) sont : %d %d %d\n", IMAGE_R[0][0], IMAGE_V[0][0], IMAGE_B[0][0]);
    
+/*####################################################################################################################*/
+    
+    // TEST DE LA FONCTION BitsPoidsForts
+    liste_decimal_en_binaire(IMAGE_R,1);
+
+
+
     return 0;
 }

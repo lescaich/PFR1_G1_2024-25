@@ -14,10 +14,8 @@ int IMAGE_V[MAX_DIM][MAX_DIM];
 int IMAGE_B[MAX_DIM][MAX_DIM];
 FILE* file;
 
-// Valeurs des images en binaire
-int Image_R_Binaire[MAX_DIM][MAX_DIM];
-int Image_V_Binaire[MAX_DIM][MAX_DIM];
-int Image_B_Binaire[MAX_DIM][MAX_DIM];
+
+
 /*####################################################################################################################*/
 
 // STRUCTURES
@@ -29,6 +27,8 @@ typedef struct {
 
 typedef RVB Liste_RVB[MAX_DIM][MAX_DIM]; // Tableau des valeurs RVB de chaque pixel
 
+Liste_RVB Tableau_RVB; // Tableau des valeurs RVB de chaque pixel (ex: Tableau_RVB[0][0].R = 255)
+
 typedef struct {
     int R_bin;
     int V_bin;
@@ -37,6 +37,7 @@ typedef struct {
 
 typedef RVB_bin Liste_RVB_bin[MAX_DIM][MAX_DIM];
 
+Liste_RVB_bin Tableau_RVB_bin;
 
 /*####################################################################################################################*/
 

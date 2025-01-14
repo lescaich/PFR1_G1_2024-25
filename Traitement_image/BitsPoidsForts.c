@@ -1,48 +1,33 @@
 #include "declaration.h"
 
 // Fonction pour convertir un nombre décimal en binaire
-int decimal_en_binaire(int nombre) {
-    if (nombre == 0) {
-        printf("0");
+int decimal_en_binaire(int nombre_decimal, int nb_bits_poids_forts) {
+    if (nombre_decimal == 0) {
         return;
     }
 
     int binaire[32];
     int index = 0;
 
-    while (nombre > 0) {
-        binaire[index] = nombre % 2;
-        nombre = nombre / 2;
+    while (nombre_decimal > 0 || index != nb_bits_poids_forts) {
+        binaire[index] = nombre_decimal % 2;
+        nombre_decimal = nombre_decimal / 2;
         index++;
     }
 
 }
 
-void liste_decimal_en_binaire(int ref_tableau[MAX_DIM][MAX_DIM], int ref_Image_R_Binaire[MAX_DIM][MAX_DIM]){
+void liste_decimal_en_binaire(Liste_RVB ref_liste_RVB, int nb_bits_poids_forts) {
+    //Liste_RVB_bin Tableau_RVB_bin;
+    
     for(int i = 0; i < MAX_DIM; i++){
         for(int j = 0; j < MAX_DIM; j++){
-            ref_Image_R_Binaire[i][j] = decimal_en_binaire(ref_tableau[i][j]);
+            Tableau_RVB_bin[i][j].R_bin = decimal_en_binaire(ref_liste_RVB[i][j].R, nb_bits_poids_forts);
+            Tableau_RVB_bin[i][j].V_bin = decimal_en_binaire(ref_liste_RVB[i][j].V, nb_bits_poids_forts);
+            Tableau_RVB_bin[i][j].B_bin = decimal_en_binaire(ref_liste_RVB[i][j].B, nb_bits_poids_forts);
         }
     }
 
     return ;
 }
 
-int main() {
-    // Valeurs des images en binaire
-    int Image_R_Binaire[MAX_DIM][MAX_DIM];
-    int Image_V_Binaire[MAX_DIM][MAX_DIM];
-    int Image_B_Binaire[MAX_DIM][MAX_DIM];
-
-    liste_decimal_en_binaire(IMAGE_R,Image_R_Binaire);
-    
-    
-    
-    
-    
-    
-    int nombre;
-    decimal_en_binaire(nombre);
-
-    return 0;
-}
