@@ -30,9 +30,9 @@ typedef RVB Liste_RVB[MAX_DIM][MAX_DIM]; // Tableau des valeurs RVB de chaque pi
 Liste_RVB Tableau_RVB; // Tableau des valeurs RVB de chaque pixel (ex: Tableau_RVB[0][0].R = 255)
 
 typedef struct {
-    int R_bin;
-    int V_bin;
-    int B_bin;
+    int R_bin[8];
+    int V_bin[8];
+    int B_bin[8];
 } RVB_bin;
 
 typedef RVB_bin Liste_RVB_bin[MAX_DIM][MAX_DIM];
@@ -50,6 +50,11 @@ void readImage(FILE* , int *, int *, int *);
 
 void valeur_RVB(int ref_tableau_R[MAX_DIM][MAX_DIM],int ref_tableau_V[MAX_DIM][MAX_DIM],int ref_tableau_B[MAX_DIM][MAX_DIM]);
 
+//BitsPoidsForts
+void decimal_en_binaire(int nombre_decimal, int nb_bits_poids_forts, int *binaire);
+
 void liste_decimal_en_binaire(Liste_RVB ref_liste_RVB, int nb_bits_poids_forts);
+
+void afficher_liste_binaire(Liste_RVB_bin liste_bin, int nb_bits_poids_forts);
 
 #endif
