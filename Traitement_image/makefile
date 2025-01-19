@@ -1,5 +1,5 @@
-tstCouleur.out: tstCouleur.o Liste_RVB.o Valeur_RVB_pour_chaque_pixel.o BitsPoidsForts.o
-	gcc tstCouleur.o Liste_RVB.o Valeur_RVB_pour_chaque_pixel.o BitsPoidsForts.o -o tstCouleur.out
+tstCouleur.out: tstCouleur.o Liste_RVB.o Valeur_RVB_pour_chaque_pixel.o BitsPoidsForts.o histogramme.o transform_image_gen.o
+	gcc tstCouleur.o Liste_RVB.o Valeur_RVB_pour_chaque_pixel.o BitsPoidsForts.o histogramme.o transform_image_gen.o -o tstCouleur.out
 
 tstCouleur.o: tstCouleur.c declaration.h
 	gcc -c tstCouleur.c
@@ -16,5 +16,11 @@ Valeur_RVB_pour_chaque_pixel.o: Valeur_RVB_pour_chaque_pixel.c declaration.h
 
 BitsPoidsForts.o: BitsPoidsForts.c declaration.h
 	gcc -c BitsPoidsForts.c
+
+histogramme.o: histogramme.c declaration.h
+	gcc -c histogramme.c
+
+transform_image_gen.o: transform_image_gen.c declaration.h
+	gcc -c transform_image_gen.c
 clean:
-	rm -f tstCouleur.out Liste_RVB.o tstCouleur.o Moyenne_couleur.o Valeur_RVB_pour_chaque_pixel.o BitsPoidsForts.o
+	rm -f tstCouleur.out Liste_RVB.o tstCouleur.o Moyenne_couleur.o Valeur_RVB_pour_chaque_pixel.o BitsPoidsForts.o histogramme.o transform_image_gen.o

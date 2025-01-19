@@ -39,11 +39,10 @@ typedef RVB_bin Liste_RVB_bin[MAX_DIM][MAX_DIM];
 
 Liste_RVB_bin Tableau_RVB_bin;
 
+
 /*####################################################################################################################*/
 
 // Structure des fonctions :
-void ouvrir_fichier(FILE* file);
-
 void readImage(FILE* , int *, int *, int *);
 
 //int moyenne_couleur(int ref_tableau[MAX_DIM][MAX_DIM]);
@@ -56,5 +55,13 @@ void decimal_en_binaire(int nombre_decimal, int nb_bits_poids_forts, int *binair
 void liste_decimal_en_binaire(Liste_RVB ref_liste_RVB, int nb_bits_poids_forts);
 
 void afficher_liste_binaire(Liste_RVB_bin liste_bin, int nb_bits_poids_forts);
+
+//histogramme.c
+void creer_histogramme(Liste_RVB_bin liste, int histogramme[64]);
+
+void afficher_histogramme(int histogramme[64]);
+
+//transform_image_gen.c
+void transform_image_gen(int bin_4n, int nb_lignes, int nb_colonnes, Liste_RVB Tableau_RVB, char couleur); 
 
 #endif

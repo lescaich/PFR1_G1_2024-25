@@ -44,5 +44,16 @@ int main() {
     }
     printf("\n");
 
+    // Créer et afficher l'histogramme
+    int histogramme[64];
+    creer_histogramme(Tableau_RVB_bin, histogramme);
+    afficher_histogramme(histogramme);
+
+    // histogramme.c
+    int bin_4n = 4; // niveaux de gris
+    char couleur = 'R'; // couleur à traiter
+    transform_image_gen(bin_4n, lignes, colonnes, Tableau_RVB, couleur);
+   
+   
     return 0;
 }
