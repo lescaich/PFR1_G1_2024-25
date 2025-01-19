@@ -1,3 +1,7 @@
+// Leo Ahmed Mushtaq 16/01/2025
+// Ce fichier permet de convertir les valeurs RVB d'un tableau à 3 dimensions en binaire et de les stocker.
+// Il permet également d'afficher les valeurs binaires.
+
 #include "declaration.h"
 // Fonction pour convertir un nombre décimal en binaire
 void decimal_en_binaire(int nombre_decimal, int nb_bits_poids_forts, int *binaire) {

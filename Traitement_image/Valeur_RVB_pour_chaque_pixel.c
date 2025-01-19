@@ -1,3 +1,5 @@
+// Leo AHMED MUSHTAQ 12/01/2025
+// Ce fichier permet de stocker les valeurs RVB de chaque pixel dans la structure Liste_RVB defini dans le .h .
 #include "declaration.h"
 
 void valeur_RVB(int ref_tableau_R[MAX_DIM][MAX_DIM],int ref_tableau_V[MAX_DIM][MAX_DIM],int ref_tableau_B[MAX_DIM][MAX_DIM]){

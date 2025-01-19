@@ -1,3 +1,5 @@
+// Leo AHMED MUSHTAQ 09/01/2025
+// Ce fichier permet de lire une image et de stocker les valeurs RVB dans des tableaux.
 #include "declaration.h"
 
 

@@ -1,4 +1,6 @@
 // Leo AHMED MUSHTAQ
+// Ce fichier permet de tester toutes les fonctions en rapport avec la detection de couleur.
+
 #include "declaration.h"
 
 
@@ -47,7 +49,8 @@ int main() {
 
     // Affichage des pixels convertis en binaire
     afficher_liste_binaire(Tableau_RVB_bin, nb_bits_poids_forts);
-
+    
+    
 
     return 0;
 }

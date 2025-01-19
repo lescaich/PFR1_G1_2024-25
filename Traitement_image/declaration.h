@@ -50,7 +50,7 @@ void readImage(FILE* , int *, int *, int *);
 
 void valeur_RVB(int ref_tableau_R[MAX_DIM][MAX_DIM],int ref_tableau_V[MAX_DIM][MAX_DIM],int ref_tableau_B[MAX_DIM][MAX_DIM]);
 
-//BitsPoidsForts
+//BitsPoidsForts.c
 void decimal_en_binaire(int nombre_decimal, int nb_bits_poids_forts, int *binaire);
 
 void liste_decimal_en_binaire(Liste_RVB ref_liste_RVB, int nb_bits_poids_forts);
