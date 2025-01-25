@@ -54,6 +54,10 @@ int main() {
     char couleur = 'R'; // couleur à traiter
     transform_image_gen(bin_4n, lignes, colonnes, Tableau_RVB, couleur);
    
-   
+    // Détecter la couleur dominante
+    char couleur_dominante = detecter_couleur_dominante(Tableau_RVB, lignes, colonnes);
+    printf("La couleur dominante est : %c\n", couleur_dominante);
+
+
     return 0;
 }

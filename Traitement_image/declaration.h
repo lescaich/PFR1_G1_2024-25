@@ -64,4 +64,7 @@ void afficher_histogramme(int histogramme[64]);
 //transform_image_gen.c
 void transform_image_gen(int bin_4n, int nb_lignes, int nb_colonnes, Liste_RVB Tableau_RVB, char couleur); 
 
+//couleur_dominante.c
+char detecter_couleur_dominante(Liste_RVB Tableau_RVB, int nb_lignes, int nb_colonnes);
+
 #endif
