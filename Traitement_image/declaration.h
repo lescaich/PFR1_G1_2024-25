@@ -29,6 +29,7 @@ typedef RVB Liste_RVB[MAX_DIM][MAX_DIM]; // Tableau des valeurs RVB de chaque pi
 
 Liste_RVB Tableau_RVB; // Tableau des valeurs RVB de chaque pixel (ex: Tableau_RVB[0][0].R = 255)
 
+// Structure pour stocker les bits de quantifications
 typedef struct {
     int R_bin[8];
     int V_bin[8];
@@ -62,6 +63,8 @@ void creer_histogramme(Liste_RVB_bin liste, int histogramme[64]);
 void afficher_histogramme(int histogramme[64]);
 
 //transform_image_gen.c
+int calcul_bin(int bin_4n, int pixel);
+
 void transform_image_gen(int bin_4n, int nb_lignes, int nb_colonnes, Liste_RVB Tableau_RVB, char couleur); 
 
 //couleur_dominante.c

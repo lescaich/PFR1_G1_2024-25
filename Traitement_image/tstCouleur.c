@@ -19,7 +19,7 @@ int main() {
     valeur_RVB(IMAGE_R, IMAGE_V, IMAGE_B);
 
     // TEST DE LA FONCTION BitsPoidsForts
-    int nb_bits_poids_forts = 4;
+    int nb_bits_poids_forts = 2;
 
     // Conversion des pixels en binaire
     liste_decimal_en_binaire(Tableau_RVB, nb_bits_poids_forts);
@@ -47,7 +47,7 @@ int main() {
     // Créer et afficher l'histogramme
     int histogramme[64];
     creer_histogramme(Tableau_RVB_bin, histogramme);
-    afficher_histogramme(histogramme);
+    //afficher_histogramme(histogramme);
 
     // histogramme.c
     int bin_4n = 4; // niveaux de gris
