@@ -15,7 +15,7 @@ int calcul_bin(int bin_4n, int pixel){
 }
 
 
-void transform_image_gen(int bin_4n, int nb_lignes, int nb_colonnes, Liste_RVB Tableau_RVB, char couleur){    
+void transform_image_gen(int bin_4n, int nb_lignes, int nb_colonnes, Liste_RVB Tableau_RVB, char couleur, Liste_RVB_Binarisation Tableau_RVB_Binarisation){    
     if (bin_4n<1 || bin_4n>256) printf("Erreur 1 : le niveau de gris n’est pas valide");
     else if ((int)log2(bin_4n) != log2(bin_4n)) printf("Erreur 2 : le niveau de gris n’est pas une puissance de 2 ");
     else{
@@ -23,7 +23,7 @@ void transform_image_gen(int bin_4n, int nb_lignes, int nb_colonnes, Liste_RVB T
             for(int i=0 ; i< nb_lignes ; i++){
                 for(int k=0; k< nb_colonnes ; k++){   
                     pixel_bin = calcul_bin(bin_4n, Tableau_RVB[i][k].R );
-                    printf("%d ", pixel_bin);
+                    Tableau_RVB_Binarisation[i][k].R_binarise = pixel_bin;
                 }     
                 printf("\n");
             }
@@ -32,7 +32,7 @@ void transform_image_gen(int bin_4n, int nb_lignes, int nb_colonnes, Liste_RVB T
             for(int i=0 ; i< nb_lignes ; i++){
                 for(int k=0; k< nb_colonnes ; k++){   
                     pixel_bin = calcul_bin(bin_4n, Tableau_RVB[i][k].V );
-                    printf("%d ", pixel_bin);
+                    Tableau_RVB_Binarisation[i][k].V_binarise = pixel_bin;
                 }     
                 printf("\n");
             }
@@ -40,8 +40,8 @@ void transform_image_gen(int bin_4n, int nb_lignes, int nb_colonnes, Liste_RVB T
         else if (couleur == 'B'){
             for(int i=0 ; i< nb_lignes ; i++){
                 for(int k=0; k< nb_colonnes ; k++){   
-                   pixel_bin = calcul_bin(bin_4n, Tableau_RVB[i][k].B );
-                    printf("%d ", pixel_bin);
+                    pixel_bin = calcul_bin(bin_4n, Tableau_RVB[i][k].B );
+                    Tableau_RVB_Binarisation[i][k].B_binarise = pixel_bin;
                 }     
                 printf("\n");
             }
@@ -53,3 +53,29 @@ void transform_image_gen(int bin_4n, int nb_lignes, int nb_colonnes, Liste_RVB T
         }
     }
 
+void affiche_binarisation(int nb_lignes, int nb_colonnes, Liste_RVB_Binarisation Tableau_RVB_Binarisation, char couleur){
+    if (couleur == 'R'){
+        for(int i=0 ; i< nb_lignes ; i++){
+            for(int k=0; k< nb_colonnes ; k++){   
+                printf("%d ", Tableau_RVB_Binarisation[i][k].R_binarise);
+            }     
+            printf("\n");
+        }
+    }
+    else if (couleur == 'V'){
+        for(int i=0 ; i< nb_lignes ; i++){
+            for(int k=0; k< nb_colonnes ; k++){   
+                printf("%d ", Tableau_RVB_Binarisation[i][k].V_binarise);
+            }     
+            printf("\n");
+        }
+    }
+    else if (couleur == 'B'){
+        for(int i=0 ; i< nb_lignes ; i++){
+            for(int k=0; k< nb_colonnes ; k++){   
+                printf("%d ", Tableau_RVB_Binarisation[i][k].B_binarise);
+            }     
+            printf("\n");
+        }
+    }
+}

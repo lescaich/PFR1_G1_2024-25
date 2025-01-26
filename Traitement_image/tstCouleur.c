@@ -32,28 +32,30 @@ int main() {
     printf("%d\n",Tableau_RVB[0][0].R );
     printf("R_bin: ");
     for (int i = 0; i < nb_bits_poids_forts; i++) {
-        printf("%d", Tableau_RVB_bin[0][0].R_bin[i]);
+        printf("%d", Tableau_RVB_Quantification[0][0].R_Quant[i]);
     }
     printf("\nV_bin: ");
     for (int i = 0; i < nb_bits_poids_forts; i++) {
-        printf("%d", Tableau_RVB_bin[0][0].V_bin[i]);
+        printf("%d", Tableau_RVB_Quantification[0][0].V_Quant[i]);
     }
     printf("\nB_bin: ");
     for (int i = 0; i < nb_bits_poids_forts; i++) {
-        printf("%d", Tableau_RVB_bin[0][0].B_bin[i]);
+        printf("%d", Tableau_RVB_Quantification[0][0].B_Quant[i]);
     }
     printf("\n");
 
     // Créer et afficher l'histogramme
     int histogramme[64];
-    creer_histogramme(Tableau_RVB_bin, histogramme);
+    creer_histogramme(Tableau_RVB_Quantification, histogramme);
     //afficher_histogramme(histogramme);
 
-    // histogramme.c
+    // Binarisation de l'image
     int bin_4n = 4; // niveaux de gris
     char couleur = 'R'; // couleur à traiter
-    transform_image_gen(bin_4n, lignes, colonnes, Tableau_RVB, couleur);
-   
+    transform_image_gen(bin_4n, lignes, colonnes, Tableau_RVB, couleur, Tableau_RVB_Binarisation);
+    
+    affiche_binarisation(lignes, colonnes, Tableau_RVB_Binarisation, couleur); // affichage de l'image binarisée pour les valeurs de R
+    
     // Détecter la couleur dominante
     char couleur_dominante = detecter_couleur_dominante(Tableau_RVB, lignes, colonnes);
     printf("La couleur dominante est : %c\n", couleur_dominante);

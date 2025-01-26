@@ -25,34 +25,34 @@ void decimal_en_binaire(int nombre_decimal, int nb_bits_poids_forts, int *binair
 void liste_decimal_en_binaire(Liste_RVB ref_liste_RVB, int nb_bits_poids_forts) {
     for (int i = 0; i < MAX_DIM; i++) {
         for (int j = 0; j < MAX_DIM; j++) {
-            decimal_en_binaire(ref_liste_RVB[i][j].R, nb_bits_poids_forts, Tableau_RVB_bin[i][j].R_bin);
-            decimal_en_binaire(ref_liste_RVB[i][j].V, nb_bits_poids_forts, Tableau_RVB_bin[i][j].V_bin);
-            decimal_en_binaire(ref_liste_RVB[i][j].B, nb_bits_poids_forts, Tableau_RVB_bin[i][j].B_bin);
+            decimal_en_binaire(ref_liste_RVB[i][j].R, nb_bits_poids_forts, Tableau_RVB_Quantification[i][j].R_Quant);
+            decimal_en_binaire(ref_liste_RVB[i][j].V, nb_bits_poids_forts, Tableau_RVB_Quantification[i][j].V_Quant);
+            decimal_en_binaire(ref_liste_RVB[i][j].B, nb_bits_poids_forts, Tableau_RVB_Quantification[i][j].B_Quant);
         }
     }
 }
 
-// Fonction pour afficher les valeurs binaires d'un tableau RVB_bin
-void afficher_liste_binaire(Liste_RVB_bin liste_bin, int nb_bits_poids_forts) {
+// Fonction pour afficher les valeurs binaires d'un tableau RVB_Quantification
+void afficher_liste_binaire(Liste_RVB_Quantification liste_quant, int nb_bits_poids_forts) {
     for (int i = 0; i < MAX_DIM; i++) {
         for (int j = 0; j < MAX_DIM; j++) {
             printf("Pixel [%d][%d] :\n", i, j);
 
             printf("  R_bin=");
             for (int k = 0; k < nb_bits_poids_forts; k++) {
-                printf("%d", liste_bin[i][j].R_bin[k]);
+                printf("%d", liste_quant[i][j].R_Quant[k]);
             }
             printf("\n");
 
             printf("  V_bin=");
             for (int k = 0; k < nb_bits_poids_forts; k++) {
-                printf("%d", liste_bin[i][j].V_bin[k]);
+                printf("%d", liste_quant[i][j].V_Quant[k]);
             }
             printf("\n");
 
             printf("  B_bin=");
             for (int k = 0; k < nb_bits_poids_forts; k++) {
-                printf("%d", liste_bin[i][j].B_bin[k]);
+                printf("%d", liste_quant[i][j].B_Quant[k]);
             }
             printf("\n");
         }
