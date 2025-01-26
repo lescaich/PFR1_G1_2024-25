@@ -36,6 +36,13 @@ typedef struct {
 
 typedef RVB_Quantification Liste_RVB_Quantification[MAX_DIM][MAX_DIM];
 
+// Tentative de rectification partielle de ma betise juste au dessus :)
+typedef struct{
+    int Concatenation_Quant[8];
+} Concatenation_Quantification;
+
+typedef Concatenation_Quantification Tableau_Quantification[MAX_DIM];
+
 Liste_RVB_Quantification Tableau_RVB_Quantification; // creation du tableau pour stocker les valeurs quantifiees
 
 // Structure pour stocker les valeurs apres binarisation de l'image
