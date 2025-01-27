@@ -35,15 +35,16 @@ typedef struct {
 } RVB_Quantification;
 
 typedef RVB_Quantification Liste_RVB_Quantification[MAX_DIM][MAX_DIM];
-
-// Tentative de rectification partielle de ma betise juste au dessus :)
-typedef struct{
-    int Concatenation_Quant[8];
-} Concatenation_Quantification;
-
-typedef Concatenation_Quantification Tableau_Quantification[MAX_DIM];
-
 Liste_RVB_Quantification Tableau_RVB_Quantification; // creation du tableau pour stocker les valeurs quantifiees
+
+
+// // Tentative de rectification partielle de ma betise juste au dessus :)
+// typedef struct{
+//     int Concatenation_Quant[8];
+// } Concatenation_Quantification;
+
+// typedef Concatenation_Quantification Tableau_Quantification[MAX_DIM];
+// Tableau_Quantification Liste_Quantification;
 
 // Structure pour stocker les valeurs apres binarisation de l'image
 typedef struct {
@@ -70,6 +71,11 @@ void decimal_en_binaire(int nombre_decimal, int nb_bits_poids_forts, int *binair
 void liste_decimal_en_binaire(Liste_RVB ref_liste_RVB, int nb_bits_poids_forts);
 
 void afficher_liste_binaire(Liste_RVB_Quantification liste_quant, int nb_bits_poids_forts);
+
+void Concatenation_bit(Liste_RVB_Quantification liste_quant, int Quantification[MAX_DIM * MAX_DIM]);
+
+void afficher_concatenation(int Quantification[MAX_DIM * MAX_DIM]);
+int decimal_en_binaire2(int filtre);
 
 //histogramme.c
 void creer_histogramme(Liste_RVB_Quantification liste, int histogramme[64]);
