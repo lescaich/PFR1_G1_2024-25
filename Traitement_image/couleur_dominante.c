@@ -1,3 +1,5 @@
+// Leo AHMED MUSHTAQ 25/01/2025
+// Ce fichier permet de détecter la couleur dominante d'une image entre Rouge, Vert et Bleu.
 #include "declaration.h"
 
 // Fonction pour détecter la couleur dominante

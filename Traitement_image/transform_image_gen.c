@@ -1,5 +1,5 @@
 // Leo AHMED MUSHTAQ 19/01/2025
-// Binarisation de l'image
+// Ce fichier permet la binarisation de l'image.
 #include "declaration.h"
 #include <math.h>
 
@@ -59,7 +59,6 @@ void affiche_binarisation(int nb_lignes, int nb_colonnes, Liste_RVB_Binarisation
             for(int k=0; k< nb_colonnes ; k++){   
                 printf("%d ", Tableau_RVB_Binarisation[i][k].R_binarise);
             }     
-            printf("\n");
         }
     }
     else if (couleur == 'V'){
@@ -67,7 +66,6 @@ void affiche_binarisation(int nb_lignes, int nb_colonnes, Liste_RVB_Binarisation
             for(int k=0; k< nb_colonnes ; k++){   
                 printf("%d ", Tableau_RVB_Binarisation[i][k].V_binarise);
             }     
-            printf("\n");
         }
     }
     else if (couleur == 'B'){
@@ -75,7 +73,6 @@ void affiche_binarisation(int nb_lignes, int nb_colonnes, Liste_RVB_Binarisation
             for(int k=0; k< nb_colonnes ; k++){   
                 printf("%d ", Tableau_RVB_Binarisation[i][k].B_binarise);
             }     
-            printf("\n");
         }
     }
 }

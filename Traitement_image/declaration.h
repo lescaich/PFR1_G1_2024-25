@@ -1,4 +1,5 @@
 // Leo AHMED MUSHTAQ 11/01/2025
+// Ce fichier permet de déclarer les structures et les fonctions utilisées dans la partie traitement d'image.
 #ifndef _Liste_RVB_
 #define _Liste_RVB_
 

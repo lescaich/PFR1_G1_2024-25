@@ -1,5 +1,5 @@
 // Leo AHMED MUSHTAQ 09/01/2025
-// Ce fichier permet de lire une image et de stocker les valeurs RVB dans des tableaux.
+// Ce fichier permet de lire une image et de stocker les valeurs RVB dans un tableau à deux dimensions.
 #include "declaration.h"
 
 

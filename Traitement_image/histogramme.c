@@ -1,3 +1,6 @@
+// Leo AHMED MUSHTAQ 25/01/2025
+// Ce fichier permet de créer un histogramme des valeurs binaires cependant il n'est pas abouti.
+
 #include "declaration.h"
 
 // Fonction pour créer un histogramme des valeurs binaires

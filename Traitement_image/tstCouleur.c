@@ -1,3 +1,5 @@
+// Leo AHMED MUSHTAQ 29/01/2025
+// Ce fichier permet de tester les différentes fonctions de la partie traitement d'image.
 #include "declaration.h"
 
 int main() {
@@ -45,9 +47,9 @@ int main() {
     printf("\n");
 
     // Créer et afficher l'histogramme
-    // int histogramme[64];
-    // creer_histogramme(Tableau_RVB_Quantification, histogramme);
-    //afficher_histogramme(histogramme);
+     int histogramme[64];
+     creer_histogramme(Tableau_RVB_Quantification, histogramme);
+    afficher_histogramme(histogramme);
 
     // Binarisation de l'image
     int bin_4n = 4; // niveaux de gris
@@ -55,7 +57,7 @@ int main() {
     transform_image_gen(bin_4n, lignes, colonnes, Tableau_RVB, couleur, Tableau_RVB_Binarisation);
     
     affiche_binarisation(lignes, colonnes, Tableau_RVB_Binarisation, couleur); // affichage de l'image binarisée pour les valeurs de R
-    printf("###################################################################################\n");
+    printf("\n###################################################################################\n");
  
     int Quantification[MAX_DIM * MAX_DIM];
     //Concatenation_bit(Tableau_RVB_Quantification, Quantification);

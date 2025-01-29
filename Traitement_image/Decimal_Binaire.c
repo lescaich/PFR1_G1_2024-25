@@ -1,3 +1,5 @@
+// Leo AHMED MUSHTAQ 16/01/2025
+// Ce fichier est un teste pour le fichier Bits_poids_forts.c
 #include <stdio.h>
 
 void decimal_en_binaire(int nombre_decimal, int nb_bits_poids_forts, int *binaire) {
